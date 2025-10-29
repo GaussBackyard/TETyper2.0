@@ -1,0 +1,38 @@
+================================================================================
+TETyper 2.0 Assembly Module - Complete Test Summary
+================================================================================
+
+Test Run: 20251029_163138
+Test Directory: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_163138
+
+Tool Availability:
+----------------------------------------
+  samtools: ✓ Available
+    Version: samtools 1.22.1
+  spades.py: ✓ Available
+    Version: SPAdes genome assembler v4.2.0
+
+Test Results:
+----------------------------------------
+[TEST 1] Tool Availability: PASSED
+[TEST 2] BAM Creation: PASSED
+[TEST 3] ReadExtractor: PASSED
+[TEST 4] Mock Assembly: PASSED
+
+Test Files Generated:
+----------------------------------------
+  BAM files: test/assembly_test_output/run_20251029_163138/bam_files
+  Extracted reads: test/assembly_test_output/run_20251029_163138/extracted_reads
+  Assemblies: test/assembly_test_output/run_20251029_163138/assemblies
+  Statistics: test/assembly_test_output/run_20251029_163138/statistics
+
+Output Files:
+----------------------------------------
+  read_extraction_summary.txt
+  tool_availability.txt
+  assembly_test.log
+
+================================================================================
+All test results saved to:
+/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_163138
+================================================================================

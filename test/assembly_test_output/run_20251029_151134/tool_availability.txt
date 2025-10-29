@@ -1,0 +1,9 @@
+Assembly Tool Availability Report
+==================================================
+
+samtools: Available
+  Version: samtools 1.22.1
+
+spades.py: Available
+  Version: SPAdes genome assembler v4.2.0
+

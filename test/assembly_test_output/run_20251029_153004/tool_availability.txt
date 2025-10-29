@@ -1,0 +1,18 @@
+Assembly Tool Availability Report
+==================================================
+
+Required Tools:
+samtools: Available
+  Version: samtools 1.22.1
+
+spades.py: Available
+  Version: SPAdes genome assembler v4.2.0
+
+Optional Tools:
+velvetg: Not Available
+  Version: Not Available
+
+velveth: Not Available
+  Version: Not Available
+
+At least one assembler available: True

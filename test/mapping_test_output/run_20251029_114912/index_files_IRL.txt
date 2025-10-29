@@ -1,0 +1,8 @@
+BWA Index Files (IRL)
+==================================================
+
+amb: 7 bytes
+ann: 32 bytes
+bwt: 124 bytes
+pac: 12 bytes
+sa: 72 bytes

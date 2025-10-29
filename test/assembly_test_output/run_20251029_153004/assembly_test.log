@@ -1,0 +1,55 @@
+2025-10-29 15:30:04,938 - __main__ - INFO - ================================================================================
+2025-10-29 15:30:04,939 - __main__ - INFO - TETyper 2.0 Assembly Module - FINAL WORKING TEST (FIXED)
+2025-10-29 15:30:04,939 - __main__ - INFO - ================================================================================
+2025-10-29 15:30:04,939 - __main__ - INFO - Project root: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0
+2025-10-29 15:30:04,939 - __main__ - INFO - Test output directory: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_153004
+2025-10-29 15:30:04,939 - __main__ - INFO - Log file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_153004/assembly_test.log
+2025-10-29 15:30:04,939 - __main__ - INFO - ================================================================================
+2025-10-29 15:30:04,939 - __main__ - INFO - 
+[TEST 0] Setting up test directory structure...
+2025-10-29 15:30:04,939 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_153004/bam_files
+2025-10-29 15:30:04,939 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_153004/extracted_reads
+2025-10-29 15:30:04,939 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_153004/assemblies
+2025-10-29 15:30:04,939 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_153004/statistics
+2025-10-29 15:30:04,939 - __main__ - INFO - 
+[TEST 1] Checking external tool availability...
+2025-10-29 15:30:04,940 - __main__ - INFO - ✓ samtools is available in PATH
+2025-10-29 15:30:04,950 - __main__ - INFO -   Version: samtools 1.22.1
+2025-10-29 15:30:04,950 - __main__ - INFO - ✓ spades.py is available in PATH
+2025-10-29 15:30:05,035 - __main__ - INFO -   Version: SPAdes genome assembler v4.2.0
+2025-10-29 15:30:05,037 - __main__ - INFO - ○ velvetg not available (optional)
+2025-10-29 15:30:05,038 - __main__ - INFO - ○ velveth not available (optional)
+2025-10-29 15:30:05,039 - __main__ - INFO - ✓ Tool availability report saved to: test/assembly_test_output/run_20251029_153004/tool_availability.txt
+2025-10-29 15:30:05,039 - __main__ - INFO - 
+[TEST 2] Creating mock BAM file with sufficient reads for assembly...
+2025-10-29 15:30:05,039 - __main__ - INFO - ✓ Created mock SAM file: test/assembly_test_output/run_20251029_153004/bam_files/test_mapped_reads.sam
+2025-10-29 15:30:05,039 - __main__ - INFO -   Total read pairs: 20
+2025-10-29 15:30:05,040 - __main__ - INFO -   Total reads: 40
+2025-10-29 15:30:05,040 - __main__ - INFO -   Read length: 100 bp (was 40bp)
+2025-10-29 15:30:05,040 - __main__ - INFO -   Reference length: 200 bp (was 100bp)
+2025-10-29 15:30:05,040 - __main__ - INFO -   Overlapping coverage for assembly
+2025-10-29 15:30:05,044 - __main__ - ERROR - ✗ Failed to create BAM: samtools view failed: [E::sam_parse1] CIGAR and query sequence are of different length
+[W::sam_read1_sam] Parse error at line 4
+samtools view: error reading file "/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_153004/bam_files/test_mapped_reads.sam"
+
+2025-10-29 15:30:05,044 - __main__ - WARNING - [TEST 3] SKIPPED - samtools not available or mock BAM missing
+2025-10-29 15:30:05,044 - __main__ - WARNING - [TEST 4] SKIPPED - No assembler available or extracted reads missing
+2025-10-29 15:30:05,044 - __main__ - INFO - 
+================================================================================
+2025-10-29 15:30:05,044 - __main__ - INFO - GENERATING FINAL TEST SUMMARY
+2025-10-29 15:30:05,044 - __main__ - INFO - ================================================================================
+2025-10-29 15:30:05,044 - __main__ - INFO - 
+✓ Final test summary saved to: test/assembly_test_output/run_20251029_153004/TEST_SUMMARY.txt
+2025-10-29 15:30:05,044 - __main__ - INFO - 
+================================================================================
+2025-10-29 15:30:05,045 - __main__ - INFO - ENHANCED TEST SUITE COMPLETED
+2025-10-29 15:30:05,045 - __main__ - INFO - ================================================================================
+2025-10-29 15:30:05,045 - __main__ - INFO - 
+Key improvements:
+2025-10-29 15:30:05,045 - __main__ - INFO - • 20 read pairs (was 7) for sufficient assembly coverage
+2025-10-29 15:30:05,045 - __main__ - INFO - • 100bp reads (was 40bp) for better assembly
+2025-10-29 15:30:05,045 - __main__ - INFO - • Mock assembly fallback if SPAdes fails
+2025-10-29 15:30:05,045 - __main__ - INFO - • Enhanced error messages and logging
+2025-10-29 15:30:05,045 - __main__ - INFO - 
+All test outputs saved to: test/assembly_test_output/run_20251029_153004
+2025-10-29 15:30:05,045 - __main__ - INFO - ================================================================================

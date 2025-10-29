@@ -1,0 +1,29 @@
+{
+  "CAV1026": {
+    "sample_id": "CAV1026",
+    "te_results": {
+      "Tn2": {
+        "left_flanks": [
+          {
+            "ref": "Tn2_IRL",
+            "flank": "ATCGATCGAT",
+            "count": 15,
+            "forward_reads": 8,
+            "reverse_reads": 7,
+            "passes_filter": true
+          }
+        ],
+        "right_flanks": [
+          {
+            "ref": "Tn2_IRR",
+            "flank": "GCTAGCTAGT",
+            "count": 12,
+            "forward_reads": 6,
+            "reverse_reads": 6,
+            "passes_filter": true
+          }
+        ]
+      }
+    }
+  }
+}

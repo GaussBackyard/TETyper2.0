@@ -1,0 +1,71 @@
+2025-10-29 16:31:38,310 - __main__ - INFO - ================================================================================
+2025-10-29 16:31:38,310 - __main__ - INFO - TETyper 2.0 Assembly Module - COMPLETE FINAL TEST SUITE
+2025-10-29 16:31:38,311 - __main__ - INFO - ================================================================================
+2025-10-29 16:31:38,311 - __main__ - INFO - Project root: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0
+2025-10-29 16:31:38,311 - __main__ - INFO - Test output directory: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_163138
+2025-10-29 16:31:38,311 - __main__ - INFO - Log file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_163138/assembly_test.log
+2025-10-29 16:31:38,311 - __main__ - INFO - ================================================================================
+2025-10-29 16:31:38,311 - __main__ - INFO - 
+[TEST 0] Setting up test directory structure...
+2025-10-29 16:31:38,311 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_163138/bam_files
+2025-10-29 16:31:38,311 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_163138/extracted_reads
+2025-10-29 16:31:38,312 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_163138/assemblies
+2025-10-29 16:31:38,312 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_163138/statistics
+2025-10-29 16:31:38,312 - __main__ - INFO - 
+[TEST 1] Checking external tool availability...
+2025-10-29 16:31:38,313 - __main__ - INFO - ✓ samtools is available in PATH
+2025-10-29 16:31:38,635 - __main__ - INFO -   Version: samtools 1.22.1
+2025-10-29 16:31:38,636 - __main__ - INFO - ✓ spades.py is available in PATH
+2025-10-29 16:31:38,938 - __main__ - INFO -   Version: SPAdes genome assembler v4.2.0
+2025-10-29 16:31:38,939 - __main__ - INFO - ✓ Tool availability report saved to: test/assembly_test_output/run_20251029_163138/tool_availability.txt
+2025-10-29 16:31:38,939 - __main__ - INFO - 
+[TEST 2] Creating bulletproof paired-end BAM file...
+2025-10-29 16:31:38,939 - __main__ - INFO - ✓ Base sequence: 100bp
+2025-10-29 16:31:38,939 - __main__ - INFO -   Sequence: GGGGTCTGACGCTCAGTGGAACGAAAACTCACGTTAAGGGCCCCTTTTAA...AATCGATCGATCGATCGCCCGGGGTTTTATCGATCGAAACGCGCATCGCG
+2025-10-29 16:31:38,939 - __main__ - INFO - ✓ Created SAM: test/assembly_test_output/run_20251029_163138/bam_files/test_mapped_reads.sam
+2025-10-29 16:31:38,939 - __main__ - INFO -   Total read pairs: 20
+2025-10-29 16:31:38,939 - __main__ - INFO -   Total reads: 40
+2025-10-29 16:31:38,940 - __main__ - INFO -   Read length: 100 bp
+2025-10-29 16:31:38,940 - __main__ - INFO -   Reference: Tn2_IRL (200bp)
+2025-10-29 16:31:38,940 - __main__ - INFO - Validating SAM format...
+2025-10-29 16:31:38,940 - __main__ - INFO - ✓ SAM format validation PASSED
+2025-10-29 16:31:38,944 - __main__ - INFO - ✓ SAM to BAM conversion successful
+2025-10-29 16:31:38,948 - __main__ - INFO - ✓ BAM sorting successful
+2025-10-29 16:31:38,952 - __main__ - INFO - ✓ BAM indexing successful
+2025-10-29 16:31:38,956 - __main__ - INFO - ✓ Created and indexed BAM
+2025-10-29 16:31:38,956 - __main__ - INFO -   Total alignments: 40
+2025-10-29 16:31:38,956 - __main__ - INFO - 
+[TEST 3] Testing ReadExtractor...
+2025-10-29 16:31:38,956 - __main__ - INFO - Extracting reads from BAM: test_mapped_reads.bam
+2025-10-29 16:31:38,956 - __main__ - INFO - Extracting mapped reads from /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_163138/bam_files/test_mapped_reads.bam
+2025-10-29 16:31:38,975 - __main__ - INFO - Mapped reads extracted: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_163138/extracted_reads/extracted_R1.fastq, /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_163138/extracted_reads/extracted_R2.fastq
+2025-10-29 16:31:38,976 - __main__ - INFO - ✓ Forward reads extracted: test/assembly_test_output/run_20251029_163138/extracted_reads/extracted_R1.fastq
+2025-10-29 16:31:38,977 - __main__ - INFO -   File size: 4231 bytes, Reads: 20
+2025-10-29 16:31:38,977 - __main__ - INFO - ✓ Reverse reads extracted: test/assembly_test_output/run_20251029_163138/extracted_reads/extracted_R2.fastq
+2025-10-29 16:31:38,977 - __main__ - INFO -   File size: 4231 bytes, Reads: 20
+2025-10-29 16:31:38,977 - __main__ - INFO - ✓ Extraction summary saved
+2025-10-29 16:31:38,977 - __main__ - INFO - 
+[TEST 4] Creating mock assembly for downstream testing...
+2025-10-29 16:31:38,977 - __main__ - INFO - ✓ Mock assembly created: test/assembly_test_output/run_20251029_163138/assemblies/mock_test/contigs.fasta
+2025-10-29 16:31:38,977 - __main__ - INFO -   Contig 1: 100 bp
+2025-10-29 16:31:38,977 - __main__ - INFO -   Contig 2: 76 bp
+2025-10-29 16:31:38,977 - __main__ - INFO - 
+================================================================================
+2025-10-29 16:31:38,978 - __main__ - INFO - GENERATING FINAL TEST SUMMARY
+2025-10-29 16:31:38,978 - __main__ - INFO - ================================================================================
+2025-10-29 16:31:38,978 - __main__ - INFO - 
+✓ Final test summary saved to: test/assembly_test_output/run_20251029_163138/TEST_SUMMARY.txt
+2025-10-29 16:31:38,978 - __main__ - INFO - 
+================================================================================
+2025-10-29 16:31:38,978 - __main__ - INFO - TEST SUITE COMPLETED SUCCESSFULLY
+2025-10-29 16:31:38,978 - __main__ - INFO - ================================================================================
+2025-10-29 16:31:38,978 - __main__ - INFO - 
+All test outputs saved to: test/assembly_test_output/run_20251029_163138
+2025-10-29 16:31:38,978 - __main__ - INFO - View complete log: test/assembly_test_output/run_20251029_163138/assembly_test.log
+2025-10-29 16:31:38,978 - __main__ - INFO - 
+Key Features:
+2025-10-29 16:31:38,978 - __main__ - INFO -   • 20 read pairs (40 total reads)
+2025-10-29 16:31:38,978 - __main__ - INFO -   • 100bp reads with proper pairing
+2025-10-29 16:31:38,978 - __main__ - INFO -   • Bulletproof SAM validation
+2025-10-29 16:31:38,979 - __main__ - INFO -   • Comprehensive logging and reporting
+2025-10-29 16:31:38,979 - __main__ - INFO - ================================================================================

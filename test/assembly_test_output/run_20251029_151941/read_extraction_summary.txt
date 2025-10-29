@@ -1,0 +1,21 @@
+Read Extraction Summary
+==================================================
+
+Input BAM: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/bam_files/test_mapped_reads.bam
+Output R1: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/extracted_reads/extracted_R1.fastq
+  Size: 637 bytes
+  Reads: 7
+Output R2: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/extracted_reads/extracted_R2.fastq
+  Size: 637 bytes
+  Reads: 7
+
+Sample reads from R1:
+--------------------------------------------------
+@READ1
+GGGGTCTGACGCTCAGTGGAACGAAAACTCACGTTAAGGG
++
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+@READ2
+GGGGTCTGACGCTCAGTGGAACGAAAACTCACGTTAAGGG
++
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII

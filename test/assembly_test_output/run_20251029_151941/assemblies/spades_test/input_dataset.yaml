@@ -1,0 +1,7 @@
+- "left reads":
+  - "/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/extracted_reads/extracted_R1.fastq"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/extracted_reads/extracted_R2.fastq"
+  "type": "paired-end"

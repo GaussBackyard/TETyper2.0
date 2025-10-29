@@ -1,0 +1,12 @@
+BWA Alignment Summary
+==================================================
+
+SAM file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/mappings/test_sample_IRL.sam
+File size: 957 bytes
+Header lines: 4
+Alignment records: 2
+
+Sample alignments:
+--------------------------------------------------
+READ1	97	Tn2_IRL	1	60	40M12S	=	1	40	GGGGTCTGACGCTCAGTGGAACGAAAACTCACGTTAAGGGAAAACCCCGGGG	IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII	NM:i:0	MD:Z:40	MC:Z:40M12S	MQ:i:60	AS:i:40	XS:i:0	RG:Z:TEST001
+READ1	145	Tn2_IRL	1	60	40M12S	=	1	-40	GGGGTCTGACGCTCAGTGGAACGAAAACTCACGTTAAGGGAAAACCCCGGGG	IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII	NM:i:0	MD:Z:40	MC:Z:40M12S	MQ:i:60	AS:i:40	XS:i:0	RG:Z:TEST001

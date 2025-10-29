@@ -1,0 +1,18 @@
+{
+  "TEST001": {
+    "Tn2": {
+      "assembly_file": null,
+      "stats": {},
+      "success": false,
+      "error": "FASTQ extraction failed or empty: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/assemblies/multi_sample_test/TEST001/TEST001_Tn2_R1.fastq"
+    }
+  },
+  "TEST002": {
+    "Tn2": {
+      "assembly_file": null,
+      "stats": {},
+      "success": false,
+      "error": "FASTQ extraction failed or empty: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/assemblies/multi_sample_test/TEST002/TEST002_Tn2_R1.fastq"
+    }
+  }
+}

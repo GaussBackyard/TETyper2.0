@@ -1,0 +1,10 @@
+TEMapper Mapping Summary
+==================================================
+
+Sample ID: TEST001
+IRL BAM: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRL_sorted.bam
+  Exists: True
+  Size: 577 bytes
+IRR BAM: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRR_sorted.bam
+  Exists: True
+  Size: 577 bytes

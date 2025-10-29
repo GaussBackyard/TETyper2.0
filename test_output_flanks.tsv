@@ -1,0 +1,3 @@
+Sample	TE	Side	Reference	Sequence	Count	Forward_Reads	Reverse_Reads	Passes_Filter
+CAV1026	Tn2	Left	Tn2_IRL	ATCGATCGAT	15	8	7	True
+CAV1026	Tn2	Right	Tn2_IRR	GCTAGCTAGT	12	6	6	True

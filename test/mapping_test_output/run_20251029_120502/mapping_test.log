@@ -1,0 +1,218 @@
+2025-10-29 12:05:02,747 - __main__ - INFO - ================================================================================
+2025-10-29 12:05:02,747 - __main__ - INFO - TETyper 2.0 Mapping Module - Comprehensive Testing
+2025-10-29 12:05:02,747 - __main__ - INFO - ================================================================================
+2025-10-29 12:05:02,747 - __main__ - INFO - Project root: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0
+2025-10-29 12:05:02,747 - __main__ - INFO - Test output directory: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502
+2025-10-29 12:05:02,747 - __main__ - INFO - Log file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/mapping_test.log
+2025-10-29 12:05:02,747 - __main__ - INFO - ================================================================================
+2025-10-29 12:05:02,747 - __main__ - INFO - 
+[TEST 0] Setting up test directory structure...
+2025-10-29 12:05:02,748 - __main__ - INFO - ✓ Created directory: test/mapping_test_output/run_20251029_120502/references
+2025-10-29 12:05:02,748 - __main__ - INFO - ✓ Created directory: test/mapping_test_output/run_20251029_120502/reads
+2025-10-29 12:05:02,748 - __main__ - INFO - ✓ Created directory: test/mapping_test_output/run_20251029_120502/mappings
+2025-10-29 12:05:02,748 - __main__ - INFO - ✓ Created directory: test/mapping_test_output/run_20251029_120502/bam_files
+2025-10-29 12:05:02,748 - __main__ - INFO - 
+[TEST 1] Checking external tool availability...
+2025-10-29 12:05:02,749 - __main__ - INFO - ✓ bwa is available in PATH
+2025-10-29 12:05:02,781 - __main__ - INFO -   Version: Version: 0.7.19-r1273
+2025-10-29 12:05:02,782 - __main__ - INFO - ✓ samtools is available in PATH
+2025-10-29 12:05:03,026 - __main__ - INFO -   Version: samtools 1.22.1
+2025-10-29 12:05:03,027 - __main__ - INFO - ✓ Tool availability report saved to: test/mapping_test_output/run_20251029_120502/tool_availability.txt
+2025-10-29 12:05:03,027 - __main__ - INFO - 
+[TEST 2] Creating test reference sequences...
+2025-10-29 12:05:03,027 - __main__ - INFO - ✓ Created test IRL FASTA: test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,027 - __main__ - INFO -   Sequence length: 40 bp
+2025-10-29 12:05:03,028 - __main__ - INFO - ✓ Created test IRR FASTA: test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta
+2025-10-29 12:05:03,028 - __main__ - INFO -   Sequence length: 40 bp
+2025-10-29 12:05:03,028 - __main__ - INFO - 
+[TEST 3] Testing BWA index creation...
+2025-10-29 12:05:03,028 - __main__ - INFO - Creating BWA index for IRL reference...
+2025-10-29 12:05:03,028 - __main__ - INFO - Creating BWA index for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,051 - __main__ - INFO - BWA index created successfully for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,051 - __main__ - INFO - ✓ IRL index creation successful
+2025-10-29 12:05:03,052 - __main__ - DEBUG -   ✓ amb file exists (7 bytes)
+2025-10-29 12:05:03,052 - __main__ - DEBUG -   ✓ ann file exists (32 bytes)
+2025-10-29 12:05:03,052 - __main__ - DEBUG -   ✓ bwt file exists (124 bytes)
+2025-10-29 12:05:03,052 - __main__ - DEBUG -   ✓ pac file exists (12 bytes)
+2025-10-29 12:05:03,052 - __main__ - DEBUG -   ✓ sa file exists (72 bytes)
+2025-10-29 12:05:03,052 - __main__ - INFO - ✓ Index report saved to: test/mapping_test_output/run_20251029_120502/index_files_IRL.txt
+2025-10-29 12:05:03,052 - __main__ - INFO - Testing index detection (should skip re-indexing)...
+2025-10-29 12:05:03,052 - __main__ - INFO - BWA index already exists for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,053 - __main__ - INFO - ✓ Correctly detected existing index
+2025-10-29 12:05:03,053 - __main__ - INFO - Creating BWA index for IRR reference...
+2025-10-29 12:05:03,053 - __main__ - INFO - Creating BWA index for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta
+2025-10-29 12:05:03,078 - __main__ - INFO - BWA index created successfully for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta
+2025-10-29 12:05:03,079 - __main__ - INFO - ✓ IRR index creation successful
+2025-10-29 12:05:03,079 - __main__ - INFO - 
+[TEST 4] Creating mock FASTQ files for alignment testing...
+2025-10-29 12:05:03,080 - __main__ - INFO - ✓ Created mock R1 FASTQ: test/mapping_test_output/run_20251029_120502/reads/test_sample_R1.fastq
+2025-10-29 12:05:03,080 - __main__ - INFO -   Number of reads: 3
+2025-10-29 12:05:03,080 - __main__ - INFO - ✓ Created mock R2 FASTQ: test/mapping_test_output/run_20251029_120502/reads/test_sample_R2.fastq
+2025-10-29 12:05:03,080 - __main__ - INFO -   Number of reads: 3
+2025-10-29 12:05:03,080 - __main__ - INFO - 
+[TEST 5] Testing BWA alignment...
+2025-10-29 12:05:03,080 - __main__ - INFO - Running BWA MEM alignment to IRL reference...
+2025-10-29 12:05:03,080 - __main__ - INFO - BWA index already exists for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,080 - __main__ - INFO - Aligning reads to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,080 - __main__ - DEBUG - BWA command: bwa mem -t 2 -R @RG\tID:TEST001\tSM:TEST001\tPL:ILLUMINA /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R1.fastq /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R2.fastq
+2025-10-29 12:05:03,118 - __main__ - INFO - BWA alignment completed: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/mappings/test_sample_IRL.sam
+2025-10-29 12:05:03,119 - __main__ - INFO - ✓ SAM file created: test/mapping_test_output/run_20251029_120502/mappings/test_sample_IRL.sam
+2025-10-29 12:05:03,119 - __main__ - INFO -   File size: 957 bytes
+2025-10-29 12:05:03,119 - __main__ - INFO -   Header lines: 4
+2025-10-29 12:05:03,119 - __main__ - INFO -   Alignment records: 2
+2025-10-29 12:05:03,119 - __main__ - INFO - ✓ Alignment summary saved to: test/mapping_test_output/run_20251029_120502/alignment_summary.txt
+2025-10-29 12:05:03,119 - __main__ - INFO - 
+[TEST 6] Testing SAMtools BAM processing...
+2025-10-29 12:05:03,119 - __main__ - INFO - Converting SAM to sorted BAM...
+2025-10-29 12:05:03,120 - __main__ - INFO - Converting /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/mappings/test_sample_IRL.sam to BAM format
+2025-10-29 12:05:03,156 - __main__ - INFO - Sorting BAM file to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/test_sample_IRL_sorted.bam
+2025-10-29 12:05:03,183 - __main__ - INFO - Sorted BAM file created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/test_sample_IRL_sorted.bam
+2025-10-29 12:05:03,183 - __main__ - INFO - ✓ BAM file created: test/mapping_test_output/run_20251029_120502/bam_files/test_sample_IRL_sorted.bam
+2025-10-29 12:05:03,183 - __main__ - INFO -   File size: 574 bytes
+2025-10-29 12:05:03,183 - __main__ - INFO - Creating BAM index...
+2025-10-29 12:05:03,184 - __main__ - INFO - Creating BAM index for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/test_sample_IRL_sorted.bam
+2025-10-29 12:05:03,196 - __main__ - INFO - BAM index created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/test_sample_IRL_sorted.bam.bai
+2025-10-29 12:05:03,196 - __main__ - INFO - ✓ BAM index created: test/mapping_test_output/run_20251029_120502/bam_files/test_sample_IRL_sorted.bam.bai
+2025-10-29 12:05:03,196 - __main__ - INFO -   Index size: 96 bytes
+2025-10-29 12:05:03,196 - __main__ - INFO - Testing index detection (should skip re-indexing)...
+2025-10-29 12:05:03,196 - __main__ - DEBUG - BAM index already exists: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/test_sample_IRL_sorted.bam.bai
+2025-10-29 12:05:03,196 - __main__ - INFO - ✓ Correctly detected existing index
+2025-10-29 12:05:03,196 - __main__ - INFO - Retrieving alignment statistics with samtools flagstat...
+2025-10-29 12:05:03,206 - __main__ - INFO - ✓ Flagstat output saved to: test/mapping_test_output/run_20251029_120502/flagstat_output.txt
+2025-10-29 12:05:03,206 - __main__ - INFO - Alignment statistics:
+2025-10-29 12:05:03,206 - __main__ - INFO -   2 + 0 in total (QC-passed reads + QC-failed reads)
+2025-10-29 12:05:03,206 - __main__ - INFO -   2 + 0 primary
+2025-10-29 12:05:03,206 - __main__ - INFO -   0 + 0 secondary
+2025-10-29 12:05:03,206 - __main__ - INFO -   0 + 0 supplementary
+2025-10-29 12:05:03,206 - __main__ - INFO -   0 + 0 duplicates
+2025-10-29 12:05:03,206 - __main__ - INFO -   0 + 0 primary duplicates
+2025-10-29 12:05:03,207 - __main__ - INFO -   2 + 0 mapped (100.00% : N/A)
+2025-10-29 12:05:03,207 - __main__ - INFO -   2 + 0 primary mapped (100.00% : N/A)
+2025-10-29 12:05:03,207 - __main__ - INFO -   2 + 0 paired in sequencing
+2025-10-29 12:05:03,207 - __main__ - INFO -   1 + 0 read1
+2025-10-29 12:05:03,207 - __main__ - INFO -   1 + 0 read2
+2025-10-29 12:05:03,207 - __main__ - INFO -   0 + 0 properly paired (0.00% : N/A)
+2025-10-29 12:05:03,207 - __main__ - INFO -   2 + 0 with itself and mate mapped
+2025-10-29 12:05:03,207 - __main__ - INFO -   0 + 0 singletons (0.00% : N/A)
+2025-10-29 12:05:03,207 - __main__ - INFO -   0 + 0 with mate mapped to a different chr
+2025-10-29 12:05:03,207 - __main__ - INFO -   0 + 0 with mate mapped to a different chr (mapQ>=5)
+2025-10-29 12:05:03,207 - __main__ - INFO - 
+[TEST 7] Testing TEMapper high-level interface...
+2025-10-29 12:05:03,207 - __main__ - INFO - Testing map_reads_to_ir for IRL...
+2025-10-29 12:05:03,207 - __main__ - INFO - BWA index already exists for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,208 - __main__ - INFO - Aligning reads to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,208 - __main__ - DEBUG - BWA command: bwa mem -t 2 -R @RG\tID:TEST001\tSM:TEST001\tPL:ILLUMINA /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R1.fastq /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R2.fastq
+2025-10-29 12:05:03,220 - __main__ - INFO - BWA alignment completed: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/temapper_output/TEST001_IRL.sam
+2025-10-29 12:05:03,220 - __main__ - INFO - Converting /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/temapper_output/TEST001_IRL.sam to BAM format
+2025-10-29 12:05:03,256 - __main__ - INFO - Sorting BAM file to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/temapper_output/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,294 - __main__ - DEBUG - Removed SAM file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/temapper_output/TEST001_IRL.sam
+2025-10-29 12:05:03,294 - __main__ - INFO - Sorted BAM file created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/temapper_output/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,294 - __main__ - INFO - Creating BAM index for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/temapper_output/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,318 - __main__ - INFO - BAM index created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/temapper_output/TEST001_IRL_sorted.bam.bai
+2025-10-29 12:05:03,318 - __main__ - INFO - Successfully mapped TEST001 to IRL: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/temapper_output/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,318 - __main__ - INFO - ✓ IRL BAM created via TEMapper: test/mapping_test_output/run_20251029_120502/bam_files/temapper_output/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,319 - __main__ - INFO - ✓ BAM index exists: test/mapping_test_output/run_20251029_120502/bam_files/temapper_output/TEST001_IRL_sorted.bam.bai
+2025-10-29 12:05:03,319 - __main__ - INFO - Testing map_sample_to_te (IRL + IRR)...
+2025-10-29 12:05:03,319 - __main__ - INFO - Mapping sample TEST001 to TE references
+2025-10-29 12:05:03,319 - __main__ - INFO - BWA index already exists for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,319 - __main__ - INFO - Aligning reads to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,319 - __main__ - DEBUG - BWA command: bwa mem -t 2 -R @RG\tID:TEST001\tSM:TEST001\tPL:ILLUMINA /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R1.fastq /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R2.fastq
+2025-10-29 12:05:03,342 - __main__ - INFO - BWA alignment completed: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRL.sam
+2025-10-29 12:05:03,342 - __main__ - INFO - Converting /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRL.sam to BAM format
+2025-10-29 12:05:03,384 - __main__ - INFO - Sorting BAM file to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,410 - __main__ - DEBUG - Removed SAM file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRL.sam
+2025-10-29 12:05:03,410 - __main__ - INFO - Sorted BAM file created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,410 - __main__ - INFO - Creating BAM index for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,428 - __main__ - INFO - BAM index created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRL_sorted.bam.bai
+2025-10-29 12:05:03,428 - __main__ - INFO - Successfully mapped TEST001 to IRL: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,429 - __main__ - INFO - BWA index already exists for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta
+2025-10-29 12:05:03,429 - __main__ - INFO - Aligning reads to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta
+2025-10-29 12:05:03,429 - __main__ - DEBUG - BWA command: bwa mem -t 2 -R @RG\tID:TEST001\tSM:TEST001\tPL:ILLUMINA /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R1.fastq /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R2.fastq
+2025-10-29 12:05:03,445 - __main__ - INFO - BWA alignment completed: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRR.sam
+2025-10-29 12:05:03,445 - __main__ - INFO - Converting /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRR.sam to BAM format
+2025-10-29 12:05:03,488 - __main__ - INFO - Sorting BAM file to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRR_sorted.bam
+2025-10-29 12:05:03,517 - __main__ - DEBUG - Removed SAM file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRR.sam
+2025-10-29 12:05:03,517 - __main__ - INFO - Sorted BAM file created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRR_sorted.bam
+2025-10-29 12:05:03,517 - __main__ - INFO - Creating BAM index for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRR_sorted.bam
+2025-10-29 12:05:03,531 - __main__ - INFO - BAM index created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRR_sorted.bam.bai
+2025-10-29 12:05:03,531 - __main__ - INFO - Successfully mapped TEST001 to IRR: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRR_sorted.bam
+2025-10-29 12:05:03,531 - __main__ - INFO - ✓ Full TE mapping completed
+2025-10-29 12:05:03,531 - __main__ - INFO -   IRL BAM: test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRL_sorted.bam (exists: True)
+2025-10-29 12:05:03,531 - __main__ - INFO -   IRR BAM: test/mapping_test_output/run_20251029_120502/bam_files/full_mapping_output/TEST001_IRR_sorted.bam (exists: True)
+2025-10-29 12:05:03,532 - __main__ - INFO - ✓ Mapping summary saved to: test/mapping_test_output/run_20251029_120502/temapper_summary.txt
+2025-10-29 12:05:03,532 - __main__ - INFO - 
+[TEST 8] Testing ParallelMapper with multiple samples...
+2025-10-29 12:05:03,532 - __main__ - INFO - Mapping 2 samples in parallel...
+2025-10-29 12:05:03,532 - __main__ - INFO - Starting parallel mapping of 2 samples with 2 workers
+2025-10-29 12:05:03,576 - __main__ - INFO - Mapping sample TEST001 to TE references
+2025-10-29 12:05:03,576 - __main__ - INFO - Mapping sample TEST002 to TE references
+2025-10-29 12:05:03,577 - __main__ - INFO - BWA index already exists for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,577 - __main__ - INFO - Aligning reads to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,577 - __main__ - DEBUG - BWA command: bwa mem -t 1 -R @RG\tID:TEST001\tSM:TEST001\tPL:ILLUMINA /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R1.fastq /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R2.fastq
+2025-10-29 12:05:03,577 - __main__ - INFO - BWA index already exists for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,577 - __main__ - INFO - Aligning reads to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta
+2025-10-29 12:05:03,577 - __main__ - DEBUG - BWA command: bwa mem -t 1 -R @RG\tID:TEST002\tSM:TEST002\tPL:ILLUMINA /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRL_test.fasta /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R1.fastq /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R2.fastq
+2025-10-29 12:05:03,597 - __main__ - INFO - BWA alignment completed: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRL.sam
+2025-10-29 12:05:03,597 - __main__ - INFO - BWA alignment completed: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRL.sam
+2025-10-29 12:05:03,597 - __main__ - INFO - Converting /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRL.sam to BAM format
+2025-10-29 12:05:03,597 - __main__ - INFO - Converting /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRL.sam to BAM format
+2025-10-29 12:05:03,632 - __main__ - INFO - Sorting BAM file to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,632 - __main__ - INFO - Sorting BAM file to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRL_sorted.bam
+2025-10-29 12:05:03,645 - __main__ - DEBUG - Removed SAM file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRL.sam
+2025-10-29 12:05:03,645 - __main__ - INFO - Sorted BAM file created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,645 - __main__ - DEBUG - Removed SAM file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRL.sam
+2025-10-29 12:05:03,645 - __main__ - INFO - Creating BAM index for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,645 - __main__ - INFO - Sorted BAM file created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRL_sorted.bam
+2025-10-29 12:05:03,646 - __main__ - INFO - Creating BAM index for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRL_sorted.bam
+2025-10-29 12:05:03,658 - __main__ - INFO - BAM index created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRL_sorted.bam.bai
+2025-10-29 12:05:03,658 - __main__ - INFO - Successfully mapped TEST002 to IRL: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRL_sorted.bam
+2025-10-29 12:05:03,658 - __main__ - INFO - BAM index created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRL_sorted.bam.bai
+2025-10-29 12:05:03,659 - __main__ - INFO - Successfully mapped TEST001 to IRL: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRL_sorted.bam
+2025-10-29 12:05:03,659 - __main__ - INFO - BWA index already exists for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta
+2025-10-29 12:05:03,659 - __main__ - INFO - Aligning reads to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta
+2025-10-29 12:05:03,659 - __main__ - DEBUG - BWA command: bwa mem -t 1 -R @RG\tID:TEST002\tSM:TEST002\tPL:ILLUMINA /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R1.fastq /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R2.fastq
+2025-10-29 12:05:03,659 - __main__ - INFO - BWA index already exists for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta
+2025-10-29 12:05:03,659 - __main__ - INFO - Aligning reads to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta
+2025-10-29 12:05:03,659 - __main__ - DEBUG - BWA command: bwa mem -t 1 -R @RG\tID:TEST001\tSM:TEST001\tPL:ILLUMINA /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/references/Tn2_IRR_test.fasta /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R1.fastq /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/reads/test_sample_R2.fastq
+2025-10-29 12:05:03,671 - __main__ - INFO - BWA alignment completed: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRR.sam
+2025-10-29 12:05:03,671 - __main__ - INFO - BWA alignment completed: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRR.sam
+2025-10-29 12:05:03,672 - __main__ - INFO - Converting /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRR.sam to BAM format
+2025-10-29 12:05:03,672 - __main__ - INFO - Converting /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRR.sam to BAM format
+2025-10-29 12:05:03,706 - __main__ - INFO - Sorting BAM file to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRR_sorted.bam
+2025-10-29 12:05:03,710 - __main__ - INFO - Sorting BAM file to /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRR_sorted.bam
+2025-10-29 12:05:03,723 - __main__ - DEBUG - Removed SAM file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRR.sam
+2025-10-29 12:05:03,723 - __main__ - INFO - Sorted BAM file created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRR_sorted.bam
+2025-10-29 12:05:03,723 - __main__ - INFO - Creating BAM index for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRR_sorted.bam
+2025-10-29 12:05:03,726 - __main__ - DEBUG - Removed SAM file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRR.sam
+2025-10-29 12:05:03,726 - __main__ - INFO - Sorted BAM file created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRR_sorted.bam
+2025-10-29 12:05:03,726 - __main__ - INFO - Creating BAM index for /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRR_sorted.bam
+2025-10-29 12:05:03,740 - __main__ - INFO - BAM index created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRR_sorted.bam.bai
+2025-10-29 12:05:03,740 - __main__ - INFO - Successfully mapped TEST001 to IRR: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST001/TEST001_IRR_sorted.bam
+2025-10-29 12:05:03,741 - __main__ - INFO - Completed mapping for TEST001
+2025-10-29 12:05:03,743 - __main__ - INFO - BAM index created: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRR_sorted.bam.bai
+2025-10-29 12:05:03,743 - __main__ - INFO - Successfully mapped TEST002 to IRR: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502/bam_files/parallel_output/TEST002/TEST002_IRR_sorted.bam
+2025-10-29 12:05:03,744 - __main__ - INFO - Completed mapping for TEST002
+2025-10-29 12:05:03,745 - __main__ - INFO - Parallel mapping completed. Success: 2, Failed: 0
+2025-10-29 12:05:03,745 - __main__ - INFO - ✓ Parallel mapping completed
+2025-10-29 12:05:03,745 - __main__ - INFO -   Successfully mapped: 2 samples
+2025-10-29 12:05:03,746 - __main__ - INFO -   TEST001:
+2025-10-29 12:05:03,746 - __main__ - INFO -     IRL BAM exists: True
+2025-10-29 12:05:03,746 - __main__ - INFO -     IRR BAM exists: True
+2025-10-29 12:05:03,746 - __main__ - INFO -   TEST002:
+2025-10-29 12:05:03,746 - __main__ - INFO -     IRL BAM exists: True
+2025-10-29 12:05:03,746 - __main__ - INFO -     IRR BAM exists: True
+2025-10-29 12:05:03,746 - __main__ - INFO - ✓ Parallel mapping summary saved to: test/mapping_test_output/run_20251029_120502/parallel_mapping_summary.txt
+2025-10-29 12:05:03,746 - __main__ - INFO - 
+================================================================================
+2025-10-29 12:05:03,746 - __main__ - INFO - GENERATING FINAL TEST SUMMARY
+2025-10-29 12:05:03,746 - __main__ - INFO - ================================================================================
+2025-10-29 12:05:03,747 - __main__ - INFO - 
+✓ Final test summary saved to: test/mapping_test_output/run_20251029_120502/TEST_SUMMARY.txt
+2025-10-29 12:05:03,747 - __main__ - INFO - 
+================================================================================
+2025-10-29 12:05:03,747 - __main__ - INFO - TEST SUITE COMPLETED SUCCESSFULLY
+2025-10-29 12:05:03,747 - __main__ - INFO - ================================================================================
+2025-10-29 12:05:03,747 - __main__ - INFO - 
+All test outputs saved to: test/mapping_test_output/run_20251029_120502
+2025-10-29 12:05:03,747 - __main__ - INFO - View complete log: test/mapping_test_output/run_20251029_120502/mapping_test.log
+2025-10-29 12:05:03,747 - __main__ - INFO - ================================================================================

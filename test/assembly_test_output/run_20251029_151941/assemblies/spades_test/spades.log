@@ -1,0 +1,80 @@
+Command line: /home/jl9gx/.conda/envs/tetyper2/bin/spades.py	-1	/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/extracted_reads/extracted_R1.fastq	-2	/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/extracted_reads/extracted_R2.fastq	-o	/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test	-t	2	-m	4	--cov-cutoff	auto	--disable-rr	
+
+System information:
+  SPAdes version: 4.2.0
+  Python version: 3.11.6
+  OS: Linux-4.18.0-553.47.1.el8_10.x86_64-x86_64-with-glibc2.28
+
+Output dir: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Standard mode
+  For multi-cell/isolate data we recommend to use '--isolate' option; for single-cell MDA data use '--sc'; for metagenomic data use '--meta'; for RNA-Seq use '--rna'.
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/extracted_reads/extracted_R1.fastq']
+      right reads: ['/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/extracted_reads/extracted_R2.fastq']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is DISABLED
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned ON and threshold will be auto-detected
+  Assembly graph output will use GFA v1.2 format
+Other parameters:
+  Dir for temp files: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/tmp
+  Threads: 2
+  Memory limit (in Gb): 4
+
+
+======= SPAdes pipeline started. Log can be found here: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/spades.log
+
+/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/extracted_reads/extracted_R1.fastq: max reads length: 40
+/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/extracted_reads/extracted_R2.fastq: max reads length: 40
+
+Reads length: 40
+
+K-mer sizes were set to [21, 33] because estimated read length (40) is less than 55
+
+===== Before start started. 
+
+
+===== Read error correction started. 
+
+
+===== Read error correction started. 
+
+
+== Running: /sfs/gpfs/tardis/home/jl9gx/.conda/envs/tetyper2/bin/spades-hammer /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/corrected/configs/config.info
+
+  0:00:00.000     1M / 18M   INFO    General                 (main.cpp                  :  76)   Starting BayesHammer, built from N/A, git revision N/A
+  0:00:00.004     1M / 18M   INFO    General                 (main.cpp                  :  77)   Loading config from "/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/corrected/configs/config.info"
+  0:00:00.004     1M / 18M   INFO    General                 (main.cpp                  :  79)   Maximum # of threads to use (adjusted due to OMP capabilities): 2
+  0:00:00.005     1M / 18M   INFO    General                 (memory_limit.cpp          :  55)   Memory limit set to 4 Gb
+  0:00:00.005     1M / 18M   INFO    General                 (main.cpp                  :  87)   Trying to determine PHRED offset
+  0:00:00.005     1M / 18M   ERROR   General                 (main.cpp                  :  90)   Failed to determine offset! Specify it manually and restart, please!
+
+
+== Error ==  system call for: "['/sfs/gpfs/tardis/home/jl9gx/.conda/envs/tetyper2/bin/spades-hammer', '/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/corrected/configs/config.info']" finished abnormally, OS return value: 255
+None
+
+In case you have troubles running SPAdes, you can report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.
+
+SPAdes log can be found here: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/spades.log
+
+Thank you for using SPAdes! If you use it in your research, please cite:
+
+  Prjibelski, A., Antipov, D., Meleshko, D., Lapidus, A. and Korobeynikov, A., 2020. Using SPAdes de novo assembler. Current protocols in bioinformatics, 70(1), p.e102.
+  doi.org/10.1002/cpbi.102
+

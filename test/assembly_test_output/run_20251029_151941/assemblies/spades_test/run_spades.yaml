@@ -1,0 +1,150 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Before_start_HAB3S0NUFZH67I6PG3BAVI7I4BHIH98M
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Read_error_correction_FB7ELZ52H8RCN9MLFWRL8P8YNUH59285
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: ec_start
+- STAGE: Read error correction
+  args:
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/corrected/configs/config.info
+  config_dir: corrected
+  del_after:
+  - tmp/hammer_96yntr3w
+  job_uuid: SPAdes_Read_error_correction_6M6OQDZB7UMADTIN3CU45RC98Y8ROREW
+  mpi_support: false
+  output_files:
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/corrected/corrected.yaml
+  path: /sfs/gpfs/tardis/home/jl9gx/.conda/envs/tetyper2/bin/spades-hammer
+  short_name: ec_runtool
+- STAGE: corrected reads compression
+  args:
+  - /sfs/gpfs/tardis/home/jl9gx/.conda/envs/tetyper2/share/spades/spades_pipeline/scripts/compress_all.py
+  - --input_file
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/corrected/corrected.yaml
+  - --ext_python_modules_home
+  - /sfs/gpfs/tardis/home/jl9gx/.conda/envs/tetyper2/share/spades
+  - --max_threads
+  - '2'
+  - --output_dir
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/corrected
+  - --gzip_output
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_corrected_reads_compression_8Y9M73AYIVSMOEX0NG2B6N3XXL88YJHM
+  mpi_support: false
+  output_files: []
+  path: /apps/software/standard/core/miniforge/24.3.0-py3.11/bin/python3
+  short_name: ec_compress
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Read_error_correction_R08UNFZVEU7YVE6K57NMFQNAJYVHO8ZT
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: ec_finish
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_OX20L1I3H2UHNKE5DBYI0BFFPZSUDKBR
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K21
+  args:
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/K21/configs/config.info
+  config_dir: K21
+  del_after: []
+  job_uuid: hpcSPAdes_K21_NXSX966PZFGR1T29OZKJCTWLJCN09NE8
+  mpi_support: true
+  output_files: []
+  path: /sfs/gpfs/tardis/home/jl9gx/.conda/envs/tetyper2/bin/{spades_core}
+  short_name: k21
+- STAGE: K33
+  args:
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/K33/configs/config.info
+  config_dir: K33
+  del_after: []
+  job_uuid: hpcSPAdes_K33_48NP3VQ2KP4USPWAIDV1RAY504W3WUG4
+  mpi_support: true
+  output_files: []
+  path: /sfs/gpfs/tardis/home/jl9gx/.conda/envs/tetyper2/bin/{spades_core}
+  short_name: k33
+- STAGE: Copy files
+  args:
+  - /sfs/gpfs/tardis/home/jl9gx/.conda/envs/tetyper2/share/spades/spades_pipeline/scripts/copy_files.py
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/K33/before_rr.fasta
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/before_rr.fasta
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/K33/assembly_graph_after_simplification.gfa
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/assembly_graph_after_simplification.gfa
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/K33/final_contigs.fasta
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/contigs.fasta
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/K33/first_pe_contigs.fasta
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/first_pe_contigs.fasta
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/K33/strain_graph.gfa
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/strain_graph.gfa
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/K33/assembly_graph_with_scaffolds.gfa
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/assembly_graph_with_scaffolds.gfa
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/K33/assembly_graph.fastg
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/assembly_graph.fastg
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/K33/final_contigs.paths
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_bjrvdysr
+  job_uuid: SPAdes_Copy_files_IHFDI57RW9X9QXVXYPZ1I2FXYND55TTJ
+  mpi_support: false
+  output_files: []
+  path: /apps/software/standard/core/miniforge/24.3.0-py3.11/bin/python3
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Assembling_3JPAXJYSKBKQ24ZVTHK8FS9IZM3GA9MJ
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /sfs/gpfs/tardis/home/jl9gx/.conda/envs/tetyper2/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/scaffolds.fasta
+  - --misc_dir
+  - /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/spades_test/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  job_uuid: SPAdes_Breaking_scaffolds_XOACZLG8EMCSGVBN7NF2O55EKDNVCZ1M
+  mpi_support: false
+  output_files: []
+  path: /apps/software/standard/core/miniforge/24.3.0-py3.11/bin/python3
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  job_uuid: SPAdes_Terminate_P1OHID2DMGMUQRUGDP8FRI9OID5QPFLW
+  mpi_support: false
+  output_files: []
+  path: 'true'
+  short_name: terminate

@@ -1,0 +1,18 @@
+{
+  "TEST001": {
+    "Tn2": {
+      "assembly_file": null,
+      "stats": {},
+      "success": false,
+      "error": "Failed to execute command spades.py -1 /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST001/TEST001_Tn2_R1.fastq -2 /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST001/TEST001_Tn2_R2.fastq -o /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST001/TEST001_Tn2_assembly -t 2 -m 4 --cov-cutoff auto --disable-rr: Command failed: spades.py -1 /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST001/TEST001_Tn2_R1.fastq -2 /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST001/TEST001_Tn2_R2.fastq -o /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST001/TEST001_Tn2_assembly -t 2 -m 4 --cov-cutoff auto --disable-rr\nStderr: "
+    }
+  },
+  "TEST002": {
+    "Tn2": {
+      "assembly_file": null,
+      "stats": {},
+      "success": false,
+      "error": "Failed to execute command spades.py -1 /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST002/TEST002_Tn2_R1.fastq -2 /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST002/TEST002_Tn2_R2.fastq -o /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST002/TEST002_Tn2_assembly -t 2 -m 4 --cov-cutoff auto --disable-rr: Command failed: spades.py -1 /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST002/TEST002_Tn2_R1.fastq -2 /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST002/TEST002_Tn2_R2.fastq -o /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151941/assemblies/multi_sample_test/TEST002/TEST002_Tn2_assembly -t 2 -m 4 --cov-cutoff auto --disable-rr\nStderr: "
+    }
+  }
+}

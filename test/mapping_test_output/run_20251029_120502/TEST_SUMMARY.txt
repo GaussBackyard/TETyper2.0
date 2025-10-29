@@ -1,0 +1,35 @@
+================================================================================
+TETyper 2.0 Mapping Module - Test Summary
+================================================================================
+
+Test Run: 20251029_120502
+Test Directory: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502
+
+Tool Availability:
+----------------------------------------
+  bwa: ✓ Available
+    Version: Version: 0.7.19-r1273
+  samtools: ✓ Available
+    Version: samtools 1.22.1
+
+Test Files Generated:
+----------------------------------------
+  References: test/mapping_test_output/run_20251029_120502/references
+  Mock Reads: test/mapping_test_output/run_20251029_120502/reads
+  Mappings: test/mapping_test_output/run_20251029_120502/mappings
+  BAM Files: test/mapping_test_output/run_20251029_120502/bam_files
+
+Output Files:
+----------------------------------------
+  alignment_summary.txt
+  flagstat_output.txt
+  index_files_IRL.txt
+  parallel_mapping_summary.txt
+  temapper_summary.txt
+  tool_availability.txt
+  mapping_test.log
+
+================================================================================
+All test results have been saved to:
+/sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_120502
+================================================================================

@@ -1,0 +1,76 @@
+2025-10-29 15:11:34,925 - __main__ - INFO - ================================================================================
+2025-10-29 15:11:34,926 - __main__ - INFO - TETyper 2.0 Assembly Module - Complete Enhanced Testing (FIXED)
+2025-10-29 15:11:34,926 - __main__ - INFO - ================================================================================
+2025-10-29 15:11:34,926 - __main__ - INFO - Project root: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0
+2025-10-29 15:11:34,926 - __main__ - INFO - Test output directory: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134
+2025-10-29 15:11:34,926 - __main__ - INFO - Log file: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/assembly_test.log
+2025-10-29 15:11:34,926 - __main__ - INFO - ================================================================================
+2025-10-29 15:11:34,926 - __main__ - INFO - 
+[TEST 0] Setting up test directory structure...
+2025-10-29 15:11:34,926 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_151134/bam_files
+2025-10-29 15:11:34,926 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_151134/extracted_reads
+2025-10-29 15:11:34,926 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_151134/assemblies
+2025-10-29 15:11:34,927 - __main__ - INFO - ✓ Created directory: test/assembly_test_output/run_20251029_151134/statistics
+2025-10-29 15:11:34,927 - __main__ - INFO - 
+[TEST 1] Checking external tool availability...
+2025-10-29 15:11:34,927 - __main__ - INFO - ✓ samtools is available in PATH
+2025-10-29 15:11:35,066 - __main__ - INFO -   Version: samtools 1.22.1
+2025-10-29 15:11:35,066 - __main__ - INFO - ✓ spades.py is available in PATH
+2025-10-29 15:11:35,264 - __main__ - INFO -   Version: SPAdes genome assembler v4.2.0
+2025-10-29 15:11:35,265 - __main__ - INFO - ✓ Tool availability report saved to: test/assembly_test_output/run_20251029_151134/tool_availability.txt
+2025-10-29 15:11:35,265 - __main__ - INFO - 
+[TEST 2] Creating mock BAM file with mapped reads...
+2025-10-29 15:11:35,265 - __main__ - INFO - ✓ Created mock SAM file: test/assembly_test_output/run_20251029_151134/bam_files/test_mapped_reads.sam
+2025-10-29 15:11:35,265 - __main__ - INFO -   Total reads: 15
+2025-10-29 15:11:35,265 - __main__ - INFO -   Sequence length: 40 bp
+2025-10-29 15:11:35,265 - __main__ - INFO -   CIGAR: 40M (40 matches)
+2025-10-29 15:11:35,265 - __main__ - INFO - Validating SAM format...
+2025-10-29 15:11:35,265 - __main__ - INFO - ✓ SAM format validation passed - all records are correct
+2025-10-29 15:11:35,266 - __main__ - INFO - Running: samtools view -b -o /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/bam_files/test_mapped_reads.bam /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/bam_files/test_mapped_reads.sam
+2025-10-29 15:11:35,270 - __main__ - INFO - ✓ SAM to BAM conversion successful
+2025-10-29 15:11:35,270 - __main__ - INFO - Running: samtools sort -o /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/bam_files/test_mapped_reads.bam /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/bam_files/test_mapped_reads.bam
+2025-10-29 15:11:35,274 - __main__ - INFO - ✓ BAM sorting successful
+2025-10-29 15:11:35,274 - __main__ - INFO - Running: samtools index /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/bam_files/test_mapped_reads.bam
+2025-10-29 15:11:35,278 - __main__ - INFO - ✓ BAM indexing successful
+2025-10-29 15:11:35,281 - __main__ - INFO - ✓ Created and indexed BAM: test/assembly_test_output/run_20251029_151134/bam_files/test_mapped_reads.bam
+2025-10-29 15:11:35,281 - __main__ - INFO -   Total alignments: 15
+2025-10-29 15:11:35,281 - __main__ - INFO - 
+[TEST 3] Testing ReadExtractor...
+2025-10-29 15:11:35,282 - __main__ - INFO - Extracting reads from BAM: test_mapped_reads.bam
+2025-10-29 15:11:35,282 - __main__ - INFO - Extracting mapped reads from /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/bam_files/test_mapped_reads.bam
+2025-10-29 15:11:35,302 - __main__ - ERROR - ✗ ReadExtractor test failed: FASTQ extraction failed or empty: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/extracted_reads/extracted_R1.fastq
+2025-10-29 15:11:35,302 - __main__ - WARNING - [TEST 4] SKIPPED - SPAdes not available or extracted reads missing
+2025-10-29 15:11:35,302 - __main__ - INFO - 
+[TEST 5] Testing AssemblyPipeline (complete workflow)...
+2025-10-29 15:11:35,302 - __main__ - INFO - Running complete assembly pipeline from BAM...
+2025-10-29 15:11:35,302 - __main__ - INFO - Extracting reads for TEST001 Tn2 assembly
+2025-10-29 15:11:35,302 - __main__ - INFO - Extracting mapped reads from /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/bam_files/test_mapped_reads.bam
+2025-10-29 15:11:35,321 - __main__ - ERROR - ✗ AssemblyPipeline test failed: FASTQ extraction failed or empty: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/assemblies/pipeline_test/TEST001_Tn2_R1.fastq
+2025-10-29 15:11:35,321 - __main__ - INFO - 
+[TEST 6] Testing AssemblyPipeline with multiple samples...
+2025-10-29 15:11:35,321 - __main__ - INFO - Processing 2 samples...
+2025-10-29 15:11:35,321 - __main__ - INFO - Extracting reads for TEST001 Tn2 assembly
+2025-10-29 15:11:35,321 - __main__ - INFO - Extracting mapped reads from /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/bam_files/test_mapped_reads.bam
+2025-10-29 15:11:35,340 - __main__ - ERROR - Assembly failed for TEST001 Tn2: FASTQ extraction failed or empty: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/assemblies/multi_sample_test/TEST001/TEST001_Tn2_R1.fastq
+2025-10-29 15:11:35,340 - __main__ - INFO - Extracting reads for TEST002 Tn2 assembly
+2025-10-29 15:11:35,340 - __main__ - INFO - Extracting mapped reads from /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/bam_files/test_mapped_reads.bam
+2025-10-29 15:11:35,359 - __main__ - ERROR - Assembly failed for TEST002 Tn2: FASTQ extraction failed or empty: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_151134/assemblies/multi_sample_test/TEST002/TEST002_Tn2_R1.fastq
+2025-10-29 15:11:35,359 - __main__ - INFO - ✓ Multi-sample pipeline completed
+2025-10-29 15:11:35,359 - __main__ - INFO -   Total samples processed: 2
+2025-10-29 15:11:35,359 - __main__ - INFO -   Successful assemblies: 0
+2025-10-29 15:11:35,359 - __main__ - INFO - ✓ Multi-sample summary saved to: test/assembly_test_output/run_20251029_151134/multi_sample_summary.txt
+2025-10-29 15:11:35,360 - __main__ - INFO - ✓ Multi-sample results JSON saved to: test/assembly_test_output/run_20251029_151134/statistics/multi_sample_results.json
+2025-10-29 15:11:35,360 - __main__ - INFO - 
+================================================================================
+2025-10-29 15:11:35,360 - __main__ - INFO - GENERATING FINAL TEST SUMMARY
+2025-10-29 15:11:35,360 - __main__ - INFO - ================================================================================
+2025-10-29 15:11:35,360 - __main__ - INFO - 
+✓ Final test summary saved to: test/assembly_test_output/run_20251029_151134/TEST_SUMMARY.txt
+2025-10-29 15:11:35,361 - __main__ - INFO - 
+================================================================================
+2025-10-29 15:11:35,361 - __main__ - INFO - TEST SUITE COMPLETED SUCCESSFULLY
+2025-10-29 15:11:35,361 - __main__ - INFO - ================================================================================
+2025-10-29 15:11:35,361 - __main__ - INFO - 
+All test outputs saved to: test/assembly_test_output/run_20251029_151134
+2025-10-29 15:11:35,361 - __main__ - INFO - View complete log: test/assembly_test_output/run_20251029_151134/assembly_test.log
+2025-10-29 15:11:35,361 - __main__ - INFO - ================================================================================

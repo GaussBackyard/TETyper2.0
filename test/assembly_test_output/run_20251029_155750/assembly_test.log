@@ -1,0 +1,100 @@
+2025-10-29 15:57:50,150 - __main__ - INFO - ================================================================================
+2025-10-29 15:57:50,150 - __main__ - INFO - TETyper 2.0 Assembly Module - BULLETPROOF TEST
+2025-10-29 15:57:50,150 - __main__ - INFO - ================================================================================
+2025-10-29 15:57:50,150 - __main__ - INFO - Project root: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0
+2025-10-29 15:57:50,150 - __main__ - INFO - Test output directory: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/assembly_test_output/run_20251029_155750
+2025-10-29 15:57:50,151 - __main__ - INFO - ================================================================================
+2025-10-29 15:57:50,151 - __main__ - INFO - 
+[TEST 0] Setting up test directory structure...
+2025-10-29 15:57:50,151 - __main__ - INFO - ✓ Created directories
+2025-10-29 15:57:50,151 - __main__ - INFO - 
+[TEST 1] Checking external tools...
+2025-10-29 15:57:50,152 - __main__ - INFO - ✓ samtools: True
+2025-10-29 15:57:50,152 - __main__ - INFO - 
+[TEST 2] Creating bulletproof SAM file...
+2025-10-29 15:57:50,152 - __main__ - INFO - ✓ Created SAM: test/assembly_test_output/run_20251029_155750/bam_files/test_mapped_reads.sam
+2025-10-29 15:57:50,152 - __main__ - INFO -   Total read pairs: 20
+2025-10-29 15:57:50,152 - __main__ - INFO -   Total reads: 40
+2025-10-29 15:57:50,152 - __main__ - INFO -   Read length: 100 bp
+2025-10-29 15:57:50,152 - __main__ - INFO - Validating SAM format...
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 4: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 4: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 5: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 5: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 6: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 6: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 7: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 7: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 8: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 8: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 9: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 9: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 10: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 10: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 11: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 11: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 12: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 12: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 13: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 13: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 14: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 14: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 15: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 15: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 16: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 16: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 17: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 17: SEQ length 94 != 100
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 18: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,153 - __main__ - ERROR -   Line 18: SEQ length 94 != 100
+2025-10-29 15:57:50,154 - __main__ - ERROR -   Line 19: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,154 - __main__ - ERROR -   Line 19: SEQ length 94 != 100
+2025-10-29 15:57:50,154 - __main__ - ERROR -   Line 20: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,154 - __main__ - ERROR -   Line 20: SEQ length 94 != 100
+2025-10-29 15:57:50,154 - __main__ - ERROR -   Line 21: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,154 - __main__ - ERROR -   Line 21: SEQ length 94 != 100
+2025-10-29 15:57:50,154 - __main__ - ERROR -   Line 22: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,154 - __main__ - ERROR -   Line 22: SEQ length 94 != 100
+2025-10-29 15:57:50,154 - __main__ - ERROR -   Line 23: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 23: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 24: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 24: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 25: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 25: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 26: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 26: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 27: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 27: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 28: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 28: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 29: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 29: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 30: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 30: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 31: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 31: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 32: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 32: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 33: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 33: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 34: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 34: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 35: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 35: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 36: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 36: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 37: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 37: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 38: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 38: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 39: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 39: SEQ length 94 != 100
+2025-10-29 15:57:50,155 - __main__ - ERROR -   Line 40: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,156 - __main__ - ERROR -   Line 40: SEQ length 94 != 100
+2025-10-29 15:57:50,156 - __main__ - ERROR -   Line 41: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,156 - __main__ - ERROR -   Line 41: SEQ length 94 != 100
+2025-10-29 15:57:50,156 - __main__ - ERROR -   Line 42: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,156 - __main__ - ERROR -   Line 42: SEQ length 94 != 100
+2025-10-29 15:57:50,156 - __main__ - ERROR -   Line 43: SEQ (94) != QUAL (100)
+2025-10-29 15:57:50,156 - __main__ - ERROR -   Line 43: SEQ length 94 != 100
+2025-10-29 15:57:50,156 - __main__ - ERROR - ✗ SAM validation FAILED

@@ -1,0 +1,18 @@
+Parallel Mapping Summary
+==================================================
+
+Total samples: 2
+Successfully mapped: 2
+
+Sample: TEST001
+  IRL BAM: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_114912/bam_files/parallel_output/TEST001/TEST001_IRL_sorted.bam
+    Exists: True
+  IRR BAM: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_114912/bam_files/parallel_output/TEST001/TEST001_IRR_sorted.bam
+    Exists: True
+
+Sample: TEST002
+  IRL BAM: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_114912/bam_files/parallel_output/TEST002/TEST002_IRL_sorted.bam
+    Exists: True
+  IRR BAM: /sfs/gpfs/tardis/home/jl9gx/plasmid/TETyper2.0/test/mapping_test_output/run_20251029_114912/bam_files/parallel_output/TEST002/TEST002_IRR_sorted.bam
+    Exists: True
+
