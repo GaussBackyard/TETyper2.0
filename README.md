@@ -22,6 +22,8 @@ You can pull and run the pre-built image directly from the GitHub Container Regi
 ```bash
 apptainer pull oras://ghcr.io/gaussbackyard/tetyper2:latest
 apptainer run tetyper2_latest.sif [args]
+```
+
 
 ## Installation
 
