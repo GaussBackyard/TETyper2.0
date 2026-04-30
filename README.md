@@ -16,6 +16,13 @@ TETyper 2.0 is a comprehensive bioinformatics pipeline for characterizing transp
 - **Batch Processing**: Parallel processing of multiple samples
 - **Comprehensive Reporting**: JSON and TSV output formats
 
+## Using Apptainer/Singularity
+You can pull and run the pre-built image directly from the GitHub Container Registry:
+
+```bash
+apptainer pull oras://ghcr.io/gaussbackyard/tetyper2:latest
+apptainer run tetyper2_latest.sif [args]
+
 ## Installation
 
 ### Prerequisites
